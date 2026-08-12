@@ -1,0 +1,143 @@
+GRUPO REYGUE INDUSTRIAL
+GUÍA PARA EDITAR LA PÁGINA — PRINCIPIANTE / VISUAL STUDIO CODE
+
+1. ABRIR EL PROYECTO
+- Descomprime el ZIP.
+- Abre Visual Studio Code.
+- Archivo > Abrir carpeta.
+- Selecciona GRUPO_REYGUE_INDUSTRIAL_WEB.
+- No abras solamente index.html; abre la carpeta completa.
+
+2. VER LA PÁGINA
+- Instala Live Server.
+- Abre index.html.
+- Presiona Go Live.
+
+3. CAMBIAR DATOS IMPORTANTES
+Abre: assets/js/config.js
+
+Ahí cambias:
+whatsappNumber
+whatsappConfigured
+whatsappDisplay
+phone
+email
+city
+hours
+facebook
+instagram
+linkedin
+siteUrl
+
+WHATSAPP:
+De inicio viene:
+whatsappNumber: "5210000000000"
+whatsappConfigured: false
+
+Cuando pongas tu número real:
+whatsappNumber: "52 + lada + número"
+whatsappConfigured: true
+whatsappDisplay: "tu número visible"
+
+4. CAMBIAR PRECIOS DE RENTA
+En config.js busca:
+plans > diaria / semanal / mensual
+y cambia los números de price y co2.
+
+5. CAMBIAR ESTADO DEL EQUIPO
+En config.js busca:
+status: "DISPONIBLE"
+Puedes usar:
+DISPONIBLE
+RENTADO
+PRÓXIMAMENTE
+MANTENIMIENTO
+
+6. AGREGAR PROYECTOS REALES
+Abre assets/js/projects.js
+Los actuales tienen demo:true.
+Duplica un objeto, cambia id/título/categoría/textos y usa demo:false.
+Coloca la foto en assets/images/ y usa una ruta como:
+image:"assets/images/pieza-real.webp"
+
+7. CAMBIAR FOTOS
+Usa nombres sin espacios, acentos ni ñ.
+BIEN: pieza-torneada-01.webp
+MAL: Pieza Torneada Ñ 01.png
+
+8. PÁGINAS
+index.html = inicio
+empresa.html = empresa
+capacidades.html = servicios generales
+maquinado.html = torno/fresadora/CNC por aliados
+soldadura.html = MIG/TIG/MMA
+estructuras.html = soportería/estructuras pequeñas
+mantenimiento.html = mantenimiento mecánico
+proyectos.html = portafolio
+renta.html = renta + calculadora
+formacion.html = practicantes
+contacto.html = cotización + FAQ
+
+9. SUBIR CAMBIOS A GITHUB SIN TERMINAL
+- Abre tu repositorio en GitHub.
+- Add file / Agregar archivo > Upload files / Cargar archivos.
+- Sube los archivos actualizados.
+- Confirma cambios.
+- GitHub Pages se actualiza después del commit.
+
+10. GITHUB PAGES
+Ajustes > Páginas
+Fuente: Implementar desde una rama
+Rama: main/principal
+Carpeta: / (root)
+
+11. NO BORRAR
+index.html
+assets/css/styles.css
+assets/js/config.js
+assets/js/app.js
+
+12. ANTES DE LANZAR
+Lee DATOS-POR-DEFINIR.txt y CHECKLIST-LANZAMIENTO.txt.
+
+
+============================================================
+16. PROYECTOS REALES DE MAQUINADO — V2
+============================================================
+
+Las fotografías nuevas dentro de:
+
+assets/images/proyectos/
+
+fueron confirmadas como trabajos realizados por Grupo REYGUE Industrial.
+
+Los datos de las tarjetas se administran desde:
+
+assets/js/projects.js
+
+Cada proyecto real utiliza:
+
+verifiedReygue: true
+demo: false
+
+No agregues cliente, material, tolerancia, medida o proceso específico si no está confirmado.
+
+El lightbox funciona automáticamente con cualquier botón o elemento que tenga:
+
+data-lightbox="ruta-de-la-imagen"
+
+============================================================
+17. SUBFILTROS DE MAQUINADO
+============================================================
+
+Los proyectos pueden tener varias subcategorías en projects.js:
+
+subcategories:["torneado","componentes"]
+
+Opciones actuales:
+
+torneado
+fresado
+engranes
+recuperacion
+componentes

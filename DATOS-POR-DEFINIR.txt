@@ -1,0 +1,92 @@
+GRUPO REYGUE INDUSTRIAL — DATOS POR DEFINIR
+
+A. CONTACTO
+[ ] WhatsApp oficial
+[X] Teléfono — 773 156 8378
+[ ] Correo
+[ ] Ciudad / zona de servicio — ubicación por confirmar
+[ ] Horarios
+[ ] Facebook / Instagram / LinkedIn
+
+B. TORNO CONVENCIONAL
+[ ] Marca/modelo
+[ ] Volteo máximo sobre bancada
+[ ] Volteo sobre carro
+[ ] Distancia entre puntos
+[ ] Paso de husillo
+[ ] Rango de RPM
+[ ] Tipos de rosca
+[ ] Accesorios/lunetas
+[ ] Instrumentos de medición
+[ ] Materiales habituales
+[ ] Tolerancias que realmente puedes sostener de forma repetible
+
+C. FRESADORA
+[ ] Marca/modelo
+[ ] Recorridos X/Y/Z
+[ ] Tamaño de mesa
+[ ] Cono/tipo de husillo
+[ ] RPM
+[ ] Mordaza/divisor/mesa rotativa
+[ ] Instrumentos de medición
+
+D. SOLDADURA
+[ ] Equipos reales
+[ ] Procesos por equipo
+[ ] Rango de amperaje
+[ ] Materiales
+[ ] Espesores habituales
+[ ] Trabajo en sitio o taller
+[ ] Certificaciones/procedimientos reales si existieran
+
+E. ESTRUCTURAS
+[ ] Tamaños máximos prácticos
+[ ] Instalación en sitio
+[ ] Zona de servicio
+[ ] Acabados
+[ ] Capacidad de traslado
+
+F. MANTENIMIENTO
+[ ] Qué sí atiendes
+[ ] Qué no atiendes
+[ ] Trabajo en planta
+[ ] Radio de servicio
+[ ] Atención urgente sí/no
+[ ] Requisitos de ingreso a planta
+
+G. CNC CON ALIADOS
+[ ] Procesos disponibles
+[ ] Capacidades dimensionales
+[ ] Materiales
+[ ] Tolerancias
+[ ] Plazos
+[ ] Cómo validas calidad
+Mantener siempre visible que es mediante aliados estratégicos.
+
+H. RENTA
+[ ] Depósito
+[ ] Identificación
+[ ] Contrato
+[ ] Daños/consumibles
+[ ] Transporte
+[ ] Entrega/recolección
+[ ] Horas de uso
+[ ] Cancelaciones
+[ ] Zona de renta
+[ ] Facturación
+
+I. COTIZACIONES
+Conviene pedir:
+nombre, empresa, contacto, plano/foto/muestra, material, cantidad, fecha requerida, aplicación, tolerancias críticas, acabado y entrega.
+
+J. PORTAFOLIO
+Para cada proyecto real:
+1) foto antes
+2) foto proceso
+3) foto final
+4) problema
+5) solución
+6) material
+7) procesos
+8) resultado
+Pide permiso antes de publicar información sensible.
