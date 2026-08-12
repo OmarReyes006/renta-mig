@@ -1,0 +1,30 @@
+RENTA MIG WEB - VERSIÓN 2
+
+NOVEDADES
+- Se quitó el recuadro azul que aparecía sobre PIDE INFORMES.
+- Al presionar PIDE INFORMES o CONTÁCTANOS aparece una transición animada.
+- Cada tarjeta de precio es clickeable.
+- Cada precio abre una página de detalle.
+- Se agregaron animaciones de entrada, hover y transición.
+- El diseño sigue funcionando en computadora y celular.
+
+ARCHIVOS
+- index.html
+- menu.html
+- detalle.html
+- styles.css
+- script.js
+- renta-mig.png
+
+PARA PROBAR
+1. Abre esta carpeta completa en Visual Studio Code.
+2. Abre index.html.
+3. Presiona Go Live.
+4. Haz clic en PIDE INFORMES.
+5. En el menú, haz clic en cualquier tarjeta.
+
+WHATSAPP
+Busca en menu.html y script.js:
+5210000000000
+
+Cámbialo por tu número real con código de país, sin espacios.
