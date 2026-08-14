@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#05080d">
+  <title>Asistente OCMAR | Evaluación preliminar industrial</title>
+  <meta name="description" content="Asistente OCMAR para organizar necesidades de piezas industriales, fallas, fabricación, reparación y cotización.">
+  <link rel="icon" href="assets/logo/favicon.svg"><link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<header class="header scrolled"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo/ocmar-logo.svg" alt="OCMAR"></a><button class="menu-btn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button><nav class="navlinks"><a href="index.html">Inicio</a><a href="index.html#servicios">Servicios</a><a href="proyectos.html">Proyectos OCMAR</a><a href="asistente.html">Asistente</a><a class="btn btn-primary nav-cta" href="cotizar.html">Cotizar</a></nav></div></header>
+<main>
+  <section class="subhero assistant-hero"><div class="wrap subhero-grid"><div><span class="eyebrow">Asistente técnico local</span><h1>CUÉNTAME QUÉ PASA CON TU PIEZA.</h1><p>Describe el componente, la máquina donde trabaja, el daño y lo que necesitas. El asistente cruza esa información con una base industrial ampliada y prepara una evaluación preliminar estructurada.</p></div><div class="assistant-stats"><div><b id="kbComponents">40+</b><span>familias de componentes</span></div><div><b>25+</b><span>modos de falla</span></div><div><b>LOCAL</b><span>sin exponer claves</span></div></div></div></section>
+
+  <section class="assistant-workspace-section">
+    <div class="wrap assistant-shell pro-shell">
+      <div class="panel chat-panel">
+        <div class="chat-head"><div><strong>Conversación técnica</strong><small>Describe el caso como se lo explicarías a un técnico.</small></div><span class="status"><span class="dot"></span> Base industrial activa</span></div>
+        <div id="chatlog" class="chatlog" aria-live="polite"><div class="msg bot"><span class="bot-label">OCMAR</span>Hola. Puedo ayudarte con fabricación, reparación, desgaste, roscas, engranes, ejes, bujes, poleas, soldadura, transportadores, reductores, bombas y muchos otros componentes.
+
+Puedes empezar con algo sencillo, por ejemplo: “Tengo una flecha desgastada donde entra el balero”.</div></div>
+        <div class="quick"><button data-q="Tengo un engrane con varios dientes desgastados y quiero saber si conviene reparar o fabricar">Engrane desgastado</button><button data-q="La flecha se desgastó donde entra el balero y tiene juego">Eje / flecha</button><button data-q="Tengo una pieza que no sé cómo se llama; gira dentro de una máquina">No sé qué pieza es</button><button data-q="Quiero fabricar una pieza nueva a partir de una muestra">Fabricar desde muestra</button><button data-q="Se está fracturando una soldadura de un soporte por vibración">Soldadura / soporte</button></div>
+        <div class="composer">
+          <div class="upload-row"><label class="upload">＋ Adjuntar fotografías <small>JPG, PNG o WEBP · máx. 5</small><input id="partImages" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><button id="clearChat" class="mini-action" type="button">Limpiar caso</button></div>
+          <div id="previewStrip" class="preview-strip"></div>
+          <div class="composer-row"><textarea id="chatText" rows="3" placeholder="Ej. Es un engrane de una máquina de tortillas. Tiene 28 dientes, varios están muy delgados y empezó a hacer ruido..."></textarea><button id="sendBtn" class="send" aria-label="Enviar">➤</button></div>
+          <div class="composer-help"><span>Enter para enviar</span><span>Shift + Enter para salto de línea</span></div>
+        </div>
+      </div>
+
+      <aside class="panel analysis-panel">
+        <div class="analysis-head"><div><strong>Evaluación preliminar OCMAR</strong><small>Resultado vivo del caso</small></div><span id="confidence" class="analysis-badge">SIN DATOS</span></div>
+        <div id="imageStage" class="image-stage"><div><img src="assets/logo/favicon.svg" alt=""><span>Adjunta una fotografía</span><small>La versión Go Live revisa calidad de imagen y contexto textual. La identificación visual real queda preparada para un backend multimodal seguro.</small></div></div>
+        <div id="photoQuality" class="photo-quality hidden"></div>
+        <div class="analysis-content">
+          <div class="analysis-primary"><span class="analysis-badge muted">COMPONENTE PROBABLE</span><h2 id="compName">Esperando información</h2><p id="observed">Describe la pieza, su función o el problema para comenzar.</p></div>
+          <div class="analysis-sections">
+            <details open><summary>Hallazgos / daños a revisar <span>+</span></summary><ul id="damage"><li>Sin datos todavía.</li></ul></details>
+            <details open><summary>Posibles causas <span>+</span></summary><ul id="causes"><li>Sin datos todavía.</li></ul></details>
+            <details open><summary>Alternativas preliminares <span>+</span></summary><ul id="options"><li>Sin datos todavía.</li></ul></details>
+            <details><summary>Medidas e información necesaria <span>+</span></summary><ul id="measurements"><li>Medidas principales y aplicación.</li></ul></details>
+            <details><summary>Preguntas recomendadas <span>+</span></summary><ul id="questions"><li>El asistente generará preguntas según el caso.</li></ul></details>
+          </div>
+          <div class="assistant-next"><button id="quoteFromAssistant" class="btn btn-primary">Pasar este caso a cotización →</button><button id="copyDiagnosis" class="btn btn-ghost">Copiar evaluación</button></div>
+          <p class="notice">Orientación preliminar. No sustituye inspección física, medición dimensional, pruebas de material, metrología ni evaluación técnica antes de fabricar o reparar.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section compact"><div class="wrap"><div class="knowledge-strip reveal"><span>El asistente local entiende, entre otros:</span><div id="knowledgeTicker">Engranes · sprockets · ejes · bujes · poleas · bridas · roscas · chaveteros · rodillos · coples · reductores · bombas · soportes · soldadura · transportadores · husillos · placas · carcasas · pernos · levas · ruedas · cuchillas · matrices · boquillas</div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-bottom"><span>© <span data-year></span> OCMAR</span><a href="tel:+527731568378">Cotización: 773 156 8378</a></div></div></footer>
+<script src="assets/js/config.js"></script><script src="data/knowledge.js"></script><script src="assets/js/main.js"></script><script src="assets/js/assistant.js"></script>
+</body></html>
