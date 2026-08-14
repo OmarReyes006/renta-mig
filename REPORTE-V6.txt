@@ -1,9 +1,0 @@
-OCMAR WEB V6
-- Revisión física condicional con datos de planta y ubicación.
-- Validación de visita en sitio.
-- PDF ampliado con bloque de revisión física.
-- Botones premium e interactivos.
-- Nueva sección Ingeniería útil / Explorador de materiales.
-- Datos industriales orientativos y no absolutos.
-- WhatsApp de prueba conservado en configuración.
-- Correo de cotizaciones preparado, pendiente de dirección oficial.
