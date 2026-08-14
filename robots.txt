@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://omarreyes006.github.io/renta-mig/sitemap.xml
