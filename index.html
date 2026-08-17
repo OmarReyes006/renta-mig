@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#04050a" />
+  <meta name="description" content="TULAFEST — demo de web interactiva premium para eventos juveniles." />
+  <title>TULAFEST — Demo Experience</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="locked">
+  <noscript>
+    <div class="noscript">Esta demo necesita JavaScript activado para mostrar las interacciones.</div>
+  </noscript>
+
+  <div class="intro" id="intro" aria-label="Pantalla de entrada">
+    <div class="intro-orb intro-orb--one"></div>
+    <div class="intro-orb intro-orb--two"></div>
+    <div class="intro-noise"></div>
+    <div class="intro-content">
+      <span class="eyebrow">WEB INTERACTIVA · DEMO EXPERIENCE</span>
+      <div class="logo-lockup" aria-label="TULAFEST">
+        <span class="logo-tula">TULA</span><span class="logo-fest">FEST</span>
+      </div>
+      <p class="intro-kicker">THE PARTY STARTS HERE</p>
+      <div class="equalizer" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <button class="btn btn--primary btn--intro" id="enterExperience">
+        <span>ENTER THE NIGHT</span>
+        <span class="btn-arrow">↗</span>
+      </button>
+      <small>Activa la experiencia visual + soundtrack</small>
+    </div>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="page-progress" aria-hidden="true"><span id="pageProgress"></span></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Ir al inicio">
+      <span>TULA</span><b>FEST</b>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#lineup">Line Up</a>
+      <a href="#tickets">Entradas</a>
+      <a href="#location">Ubicación</a>
+      <a href="#gallery">Galería</a>
+    </nav>
+    <div class="header-actions">
+      <button class="sound-toggle" id="soundToggle" aria-pressed="false" aria-label="Activar o pausar música">
+        <span class="sound-bars"><i></i><i></i><i></i><i></i></span>
+        <span id="soundLabel">SOUND OFF</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__inner">
+      <span class="eyebrow">EXPLORE TULAFEST</span>
+      <a href="#home">01 <strong>Inicio</strong></a>
+      <a href="#lineup">02 <strong>Line Up</strong></a>
+      <a href="#tickets">03 <strong>Entradas</strong></a>
+      <a href="#location">04 <strong>Ubicación</strong></a>
+      <a href="#gallery">05 <strong>Galería</strong></a>
+      <p>Tula de Allende, Hidalgo · Demo 2026</p>
+    </div>
+  </aside>
+
+  <div class="energy-meter" aria-label="Tula Energy Meter">
+    <span>ENERGY</span>
+    <strong id="energyValue">00%</strong>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/images/hero-neon.svg" alt="" />
+        <div class="hero-grid"></div>
+        <div class="laser laser--one"></div>
+        <div class="laser laser--two"></div>
+        <div class="laser laser--three"></div>
+      </div>
+      <div class="hero-copy reveal">
+        <span class="pill"><i></i> DEMO EXPERIENCE · 2026</span>
+        <p class="hero-overline">PREMIUM NIGHT EVENT · TULA DE ALLENDE</p>
+        <h1><span>TULA</span><em>FEST</em></h1>
+        <p class="hero-statement">Una noche. <b>Una vibra.</b><br />Una experiencia.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#tickets">GET ACCESS <span>↓</span></a>
+          <a class="btn btn--ghost" href="#experience">EXPLORAR EVENTO</a>
+        </div>
+      </div>
+      <div class="hero-side reveal reveal--delay">
+        <div class="date-card glass-card">
+          <span>NEXT EVENT</span>
+          <strong>14 · NOV · 26</strong>
+          <small>Tula de Allende, Hidalgo</small>
+        </div>
+        <div class="hero-disc">
+          <div class="disc-core">TF</div>
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="circlePath" d="M 100, 100 m -74,0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0" /></defs>
+            <text><textPath href="#circlePath">TULAFEST · FEEL THE ENERGY · TULAFEST · FEEL THE ENERGY · </textPath></text>
+          </svg>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#countdown" aria-label="Continuar"><span></span>SCROLL TO FEEL IT</a>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>THIS IS TULAFEST</span><b>✦</b><span>DJ SETS</span><b>✦</b><span>LIGHT SHOW</span><b>✦</b><span>ONE NIGHT. ONE VIBE.</span><b>✦</b>
+        <span>THIS IS TULAFEST</span><b>✦</b><span>DJ SETS</span><b>✦</b><span>LIGHT SHOW</span><b>✦</b><span>ONE NIGHT. ONE VIBE.</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="countdown section" id="countdown">
+      <div class="section-head reveal">
+        <span class="section-index">01 / COUNTDOWN</span>
+        <h2>THE NIGHT<br /><em>IS COMING.</em></h2>
+      </div>
+      <div class="count-grid reveal">
+        <div class="count-box"><strong id="days">00</strong><span>DÍAS</span></div>
+        <div class="count-sep">:</div>
+        <div class="count-box"><strong id="hours">00</strong><span>HORAS</span></div>
+        <div class="count-sep">:</div>
+        <div class="count-box"><strong id="minutes">00</strong><span>MIN</span></div>
+        <div class="count-sep">:</div>
+        <div class="count-box"><strong id="seconds">00</strong><span>SEG</span></div>
+      </div>
+      <p class="count-note reveal">SÁBADO 14 NOV 2026 · 20:00 HRS · <b>TULA DE ALLENDE</b></p>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="section-head reveal">
+        <span class="section-index">02 / THE EXPERIENCE</span>
+        <h2>NO ES SOLO<br /><em>UNA FIESTA.</em></h2>
+        <p>TULAFEST mezcla música, luz y energía en una experiencia nocturna pensada para sentirse desde el primer segundo.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span class="feature-num">01</span><div class="feature-icon">♫</div><h3>DJ SETS</h3><p>Sets de alto impacto y una selección creada para mantener la energía arriba.</p>
+        </article>
+        <article class="feature-card reveal reveal--delay">
+          <span class="feature-num">02</span><div class="feature-icon">↯</div><h3>LIGHT SHOW</h3><p>Neón, humo y haces de luz que transforman el espacio durante toda la noche.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-num">03</span><div class="feature-icon">◉</div><h3>PARTY VIBES</h3><p>Visuales, ritmo y una atmósfera premium para una noche fuera de lo común.</p>
+        </article>
+        <article class="feature-card reveal reveal--delay">
+          <span class="feature-num">04</span><div class="feature-icon">✦</div><h3>NIGHT EXPERIENCE</h3><p>Una experiencia digital y física conectada desde la invitación hasta el evento.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="lineup section" id="lineup">
+      <div class="lineup-bg"></div>
+      <div class="section-head reveal">
+        <span class="section-index">03 / LINE UP</span>
+        <h2>MEET THE<br /><em>LINE UP.</em></h2>
+      </div>
+      <div class="lineup-list">
+        <article class="artist reveal" data-artist="DJ NEX">
+          <span>01</span><div><small>OPENING SET</small><h3>DJ NEX</h3></div><b>20:30</b><i>↗</i>
+        </article>
+        <article class="artist reveal" data-artist="KALIX">
+          <span>02</span><div><small>URBAN / ELECTRONIC</small><h3>KALIX</h3></div><b>22:00</b><i>↗</i>
+        </article>
+        <article class="artist reveal" data-artist="NOVA BEAT">
+          <span>03</span><div><small>MAIN SET</small><h3>NOVA BEAT</h3></div><b>23:30</b><i>↗</i>
+        </article>
+        <article class="artist reveal" data-artist="VØRTEX">
+          <span>04</span><div><small>CLOSING VIBES</small><h3>VØRTEX</h3></div><b>01:30</b><i>↗</i>
+        </article>
+      </div>
+    </section>
+
+    <section class="timeline section" id="schedule">
+      <div class="section-head reveal">
+        <span class="section-index">04 / NIGHT FLOW</span>
+        <h2>FROM DOORS<br /><em>TO CLOSING.</em></h2>
+      </div>
+      <div class="timeline-track reveal">
+        <div class="timeline-item"><span>20:00</span><i></i><div><small>01</small><h3>DOORS OPEN</h3><p>Acceso + welcome vibes.</p></div></div>
+        <div class="timeline-item"><span>21:00</span><i></i><div><small>02</small><h3>WARM UP</h3><p>Subimos la energía.</p></div></div>
+        <div class="timeline-item"><span>23:30</span><i></i><div><small>03</small><h3>MAIN SET</h3><p>La noche llega al máximo.</p></div></div>
+        <div class="timeline-item"><span>00:30</span><i></i><div><small>04</small><h3>PEAK HOUR</h3><p>Lights. Bass. TULAFEST.</p></div></div>
+        <div class="timeline-item"><span>02:00</span><i></i><div><small>05</small><h3>CLOSING VIBES</h3><p>Último set de la noche.</p></div></div>
+      </div>
+    </section>
+
+    <section class="tickets section" id="tickets">
+      <div class="section-head reveal">
+        <span class="section-index">05 / GET ACCESS</span>
+        <h2>CHOOSE YOUR<br /><em>EXPERIENCE.</em></h2>
+        <p>Precios y disponibilidad mostrados únicamente con fines de demostración.</p>
+      </div>
+      <div class="ticket-grid">
+        <article class="ticket reveal">
+          <div class="ticket-top"><span>FASE 01</span><b>LIMITED</b></div>
+          <h3>EARLY<br />ACCESS</h3>
+          <div class="ticket-price"><sup>$</sup>149 <small>MXN</small></div>
+          <ul><li>Acceso general</li><li>Primera fase</li><li>Cupo limitado</li></ul>
+          <div class="availability"><div><span>Disponibilidad</span><strong>22%</strong></div><i><b style="width:78%"></b></i></div>
+          <button class="btn btn--ticket demo-action" data-ticket="Early Access">OBTENER ACCESO ↗</button>
+        </article>
+        <article class="ticket ticket--featured reveal reveal--delay">
+          <div class="ticket-glow"></div>
+          <div class="ticket-top"><span>FASE 02</span><b>POPULAR</b></div>
+          <h3>GENERAL<br />ACCESS</h3>
+          <div class="ticket-price"><sup>$</sup>199 <small>MXN</small></div>
+          <ul><li>Acceso TULAFEST</li><li>DJ + light experience</li><li>Experiencia completa</li></ul>
+          <div class="availability"><div><span>Disponibilidad</span><strong>64%</strong></div><i><b style="width:36%"></b></i></div>
+          <button class="btn btn--ticket demo-action" data-ticket="General Access">GET ACCESS ↗</button>
+        </article>
+        <article class="ticket reveal">
+          <div class="ticket-top"><span>PREMIUM</span><b>VIP</b></div>
+          <h3>VIP<br />EXPERIENCE</h3>
+          <div class="ticket-price"><sup>$</sup>349 <small>MXN</small></div>
+          <ul><li>Acceso preferente</li><li>Zona especial</li><li>Entrada rápida</li></ul>
+          <div class="availability"><div><span>Disponibilidad</span><strong>38%</strong></div><i><b style="width:62%"></b></i></div>
+          <button class="btn btn--ticket demo-action" data-ticket="VIP Experience">GO VIP ↗</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="dress-location section" id="location">
+      <article class="dress-panel reveal">
+        <span class="section-index">06 / DRESS CODE</span>
+        <h2>SHOW UP.<br /><em>STAND OUT.</em></h2>
+        <div class="dress-tags"><span>NIGHT</span><span>URBAN</span><span>NEON TOUCH</span></div>
+        <p>Oscuro, limpio y con un detalle que encienda la noche.</p>
+        <div class="swatches" aria-label="Paleta sugerida"><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="location-panel reveal reveal--delay">
+        <div class="map-grid"></div>
+        <span class="location-pin">⌖</span>
+        <span class="section-index">07 / LOCATION</span>
+        <h2>TULA DE<br /><em>ALLENDE.</em></h2>
+        <p>Hidalgo, México.</p>
+        <small>La ubicación exacta será revelada próximamente.</small>
+        <button class="btn btn--ghost demo-info" data-info="location">LOCATION SOON</button>
+      </article>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="section-head reveal">
+        <span class="section-index">08 / VISUALS</span>
+        <h2>FEEL THE<br /><em>ATMOSPHERE.</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-card gallery-card--wide reveal" data-image="assets/images/gallery-dj.svg" aria-label="Ver imagen DJ set"><img src="assets/images/gallery-dj.svg" alt="Visual demo de DJ y luces neón" /><span>DJ SET / 01</span></button>
+        <button class="gallery-card reveal" data-image="assets/images/gallery-laser.svg" aria-label="Ver imagen laser"><img src="assets/images/gallery-laser.svg" alt="Visual demo de luces láser" /><span>LIGHTS / 02</span></button>
+        <button class="gallery-card reveal reveal--delay" data-image="assets/images/gallery-crowd.svg" aria-label="Ver imagen crowd"><img src="assets/images/gallery-crowd.svg" alt="Visual demo de público y escenario" /><span>ENERGY / 03</span></button>
+        <button class="gallery-card gallery-card--wide reveal" data-image="assets/images/gallery-stage.svg" aria-label="Ver imagen escenario"><img src="assets/images/gallery-stage.svg" alt="Visual demo del escenario TULAFEST" /><span>STAGE / 04</span></button>
+      </div>
+    </section>
+
+    <section class="music section" id="music">
+      <div class="music-shell reveal">
+        <div>
+          <span class="section-index">09 / PLAY THE VIBE</span>
+          <h2>SOUND<br /><em>ON.</em></h2>
+          <p>Activa el soundtrack de TULAFEST y siente cómo el audio transforma por completo la experiencia web.</p>
+        </div>
+        <button class="vinyl" id="musicPlay" aria-label="Reproducir o pausar soundtrack">
+          <span>TF</span>
+          <i></i>
+        </button>
+        <div class="waveform" id="waveform" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="track-info"><span>OFFICIAL YOUTUBE STREAM</span><strong>L-GANTE RKT — DJ TAO ft. PAPU DJ</strong><small>Soundtrack conectado al video indicado para esta demo.</small></div>
+        <p class="music-note">La reproducción necesita conexión a internet. Si el navegador no permite iniciar el audio al entrar, toca SOUND ON o el disco TF.</p>
+        <div class="youtube-player-wrap" aria-label="Reproductor de YouTube">
+          <div id="youtubePlayer"></div>
+          <span class="youtube-player-badge"><i></i> Soundtrack via YouTube</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section">
+      <div class="cta-noise"></div>
+      <span class="eyebrow reveal">WEB INTERACTIVA · $549 MXN · DEMO</span>
+      <h2 class="reveal">THIS IS NOT<br />JUST A PARTY.</h2>
+      <p class="reveal">IT'S A <em>NIGHT EXPERIENCE.</em></p>
+      <div class="logo-lockup logo-lockup--footer reveal"><span class="logo-tula">TULA</span><span class="logo-fest">FEST</span></div>
+      <button class="btn btn--primary demo-info reveal" data-info="quote">QUIERO UNA WEB ASÍ ↗</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><span>TULA</span><b>FEST</b></div>
+    <p>Demo Experience · Interactive Event Web</p>
+    <span>© 2026 · Tula de Allende, Hidalgo</span>
+  </footer>
+
+  <nav class="mobile-bottom-nav" aria-label="Navegación móvil">
+    <a class="active" href="#home"><span>⌂</span><small>INICIO</small></a>
+    <a href="#lineup"><span>♫</span><small>LINE UP</small></a>
+    <a href="#tickets"><span>▱</span><small>ACCESO</small></a>
+    <a href="#gallery"><span>▦</span><small>GALERÍA</small></a>
+  </nav>
+
+  <dialog class="modal" id="demoModal">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+    <span class="modal-icon">✦</span>
+    <span class="eyebrow">DEMO EXPERIENCE</span>
+    <h2 id="modalTitle">ACCESO DEMO</h2>
+    <p id="modalText">Esta es una demostración interactiva. En una versión real, este botón puede conectarse a un sistema de venta o registro.</p>
+    <button class="btn btn--primary modal-ok">ENTENDIDO</button>
+  </dialog>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="modal-close lightbox-close" aria-label="Cerrar imagen">×</button>
+    <img id="lightboxImage" src="" alt="Vista ampliada de la galería" />
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
